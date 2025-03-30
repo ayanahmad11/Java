@@ -51,7 +51,7 @@
  *  byte <- short <- int <- long <-float <-double   [explicit type conversion]
  ? Double(64 bit) vs Float(32 bit)
  *  Double has more precision (1-sign ,11-exponent,52-mantissa) 
- TODO: What is associativity and precedence?
+ TODO: What is associsativity and precedence?
  *
  * 
  */
@@ -104,22 +104,34 @@ public class Day2{
             }
             System.out.println();
         }
-        for(int i=1;i<=n;i++)
-        {
-            for(int j=1;j<=n;j++)
-            { 
-                
-                if(j<=n-i)
-                System.out.print(" ");
-                else
-                System.out.print("* "); // triangle
-                // System.out.print("*");  right triangle
-              
-             
+        for (int i = 1; i <= n; i++) { // Loop for rows
+            for (int j = 1; j <= n; j++) { 
+                if (j <= n - i) // Print leading spaces
+                    System.out.print("  "); // Two spaces for proper alignment
+                else 
+                    System.out.print("* "); // Print star followed by a space
             }
-           System.out.println();
-           
+            System.out.println(); // Move to the next line
         }
+        // for(int i=1;i<=n;i++)
+        // {
+        //     for(int j=1;j<=n;j++)
+        //     { 
+                
+        //         // if(j<=n-i)
+        //         // System.out.print(" ");
+        //         // else
+        //         // System.out.print("* "); // triangle
+        //         // System.out.print("*");  right triangle
+        //         if(j<=n-i)
+        //         System.out.print(" ");
+        //         else 
+        //         System.out.print("* ");
+             
+        //     }
+        //    System.out.println();
+           
+        // }
 
     }
 }
