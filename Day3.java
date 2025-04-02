@@ -15,6 +15,7 @@
  * */ 
 import java.math.*;
 import java.util.ArrayList;
+
 public class Day3 {
    
     public static int A = 5;

@@ -42,7 +42,8 @@
  *  If the main method is not public, it’s access is restricted.
  *  If you try to run Java code where main is not static, you will get an error.
  ? Fixed Signature :  main(String[] args)
- ? Data types -  byte(1byte) , short(2byte) , int(4byte) , long (8byte), char(2byte) , float(4 byte) ,double(8 byte) , boolean (1byte)
+ ? Data types(Primitives) -  byte(1byte) , short(2byte) , int(4byte) , long (8byte), char(2byte) , float(4 byte) ,double(8 byte) , boolean (1byte)
+ ? Data types (Non - primitives ) - Class, Array , Interface , Object
  ? Escape Sequence :   a combination of characters, typically starting with a backslash (`\`), 
  * used to represent special characters 
  * or commands that might otherwise be difficult or impossible to represent directly

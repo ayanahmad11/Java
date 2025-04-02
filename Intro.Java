@@ -53,5 +53,5 @@
 * development and interaction , seamless integrating with internet
 TODO : OBJECT Oriented Programming Language
 * with focus on data , its attibutes and methods, and then we code
-*   
+TODO : multithreading vs multitasking; 
 */ 
