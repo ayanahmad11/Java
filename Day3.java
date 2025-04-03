@@ -15,6 +15,7 @@
  * */ 
 import java.math.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Day3 {
    
@@ -27,7 +28,7 @@ public class Day3 {
     }
     public static void main(String args[])
     {   
-
+         Scanner in = new Scanner(System.in);
          //! Array decalaration
          int[] myInts = new int [5];
          myInts [0] = 5;
@@ -86,7 +87,11 @@ public class Day3 {
         //
         println(9/3/3 + 2); //1 + 2; 
         println(9/3^0);   //  3^0 = 3 // ^ acting as xor 
-
+        int count = in.nextInt();
+        for(int i=0;i<=count;i++)
+    {
+        System.out.print(fib(i) + " ");
+    }
         // println(a);
         // println(b);
     }
@@ -155,6 +160,7 @@ public class Day3 {
         }
         // return curr/
     }
+    
     public static int fib(int n) {
 
         // If n is 1 or 0, then return n, works for 0th

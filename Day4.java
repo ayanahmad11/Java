@@ -68,8 +68,47 @@ TODO: Key Features of Constructors:
 
 * Garbage Collection and Finalize
 * Gb collection is managed by JVM , running in background 
-?    
+
+? Loops -  for,while,do while
+* break,continue,return
+? Recursion
+* function calling itself
+
+? toString method(); provides a string representation of an object
+? Inheritance : It's inherited from the Object class
+? Default Format : By default,return class name @hashcode
+? hashcode [Classname@objecthashcode]
+* toString() is implicit
+
+! String Class  
+* 1> Immutability : Once created, a String Object's value can't be changed
+* 2> String Pool : Java maintains a pool of strings for efficiency , 
+*                  when a  new string is created, it's checked against the pool
+*                  for a match to refuse
+! 3> Comparing : equals() method for value comparison,
+! == operator checks reference equality
+
+* String Class
+* 1. Concatenation : Strings can be concatenated using + operator,
+*    but each concatenation created a new String 
+* 2. Methods : provides a method like length(),substring(),equals()
+*             compareTo(),indexOf(), for various operations  
+* 3. Memory : Being Immutable, strings can use more memory
+*              when frequently modified
+! Final keyword
+* 1. Variable : When applied to a variable, it becomes constant,        
+*                meaning its value cannot be changed once initiliazed.
+
+* 2.Efficiency : final can to lead to performance optimizations.
+
+* 3. Null safety : A final varible  must be initialized before the constructor completes
+* reducing null pointing errors.
+
+* 4. Immutable objects : Helps in creating  immutable objects in 
+*combination with private fields and no setter method.
+
 * */
+    import java.util.Scanner;
     public  class Day4 {
         static int noOfCarsSold;
         int  noOfWheels;
@@ -119,13 +158,73 @@ TODO: Key Features of Constructors:
         }
         public static void main(String[] args)
         {
+            Scanner in = new Scanner(System.in);
             Day4 swift = new Day4("red");
             Day4 thar = new Day4("black");
             // swift.color = "red"; 
             System.out.println(thar.color);
             System.out.println(swift.color);
             System.out.println("koka");
-            
+            fibonacci(8); // fibonacci upti nth term 
+            //* Switch statement 
+            switch(thar.color)
+            {   
+                case "red" : System.out.println("Laal hai");
+                             break;
+                case "Black" : System.out.println("Kaala");
+                              break;
+                default : System.out.println("Satrangi");
+                              break;
+            }
+            switch(swift.color)
+            {   
+                case "red" : System.out.println("Laal hai");
+                             break;
+                case "Black" : System.out.println("Kaala");
+                             break;
+                default : System.out.println("Satrangi");
+                             break;
+            }
+            String  s = in.next();
+            StringBuilder sb = new StringBuilder("First");
+            sb.append(45);
+            sb.append(", now is the ");
+            sb.append(76.45);
+            System.out.println(sb);
+            int[] arr = {1,2,4};
+            System.out.println(arr.length);
+            System.out.println(s.length());
+            System.out.println((palindromeChecker(s))? "palindrome" : "not palindrome");
 
+
+        }
+       static boolean palindromeChecker(String s)
+       {
+            if(s.length()<=1)
+            return true;
+            int lastPos =  s.length() - 1;
+            if(s.charAt(0) != s.charAt(lastPos))
+                return false;
+            String newStr = s.substring(1,lastPos);
+            return palindromeChecker(newStr);
+
+       }
+       static long factorial(int num)
+       {    
+
+            if(num == 1)
+            return 1;
+            return num * factorial(num-1);
+       }
+       static void fibonacci(int n)
+        {
+            int a=0,b=1,c;
+            for(int i=0;i<n;i++)
+            {
+                System.out.print(a+" ");
+                c = a+b;
+                a = b;
+                b = c;
+            }
         }
     }
